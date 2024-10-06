@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meta Translate</title>
+        <link rel="stylesheet" href="translate.css" type="text/css" />
+        <script src="translate.js"></script>
+    </head>
+    <body onload="init()">
+        <div class="container">
+            <h1>Google Transcender</h1>
+
+            <div class="input-group">
+                <label for="api_key">API Key:</label>
+                <input
+                    type="text"
+                    id="api_key"
+                    value="AIzaSyAaCEM5-HHl7qSWC2PoNRdzW2NZyZU1lLg"
+                    class="input_box"
+                />
+            </div>
+
+            <div class="input-group">
+                <label for="input_text">Text to Translate:</label>
+                <input
+                    type="text"
+                    id="input_text"
+                    value="Hello World!"
+                    class="input_box"
+                />
+            </div>
+
+            <div class="input-group">
+                <label for="translation_amount">Number of Translations:</label>
+                <input
+                    type="number"
+                    id="translation_amount"
+                    value="3"
+                    class="input_box"
+                    min="1"
+                />
+            </div>
+
+            <div class="button-group">
+                <button onclick="run()">Translate</button>
+            </div>
+            <div id="node-container">
+                <svg id="lines-container" width="100%" height="400"></svg>
+            </div>
+            <br />
+            <div class="output-group">
+                <label for="output_text">Translated Text:</label>
+                <textarea
+                    id="output_text"
+                    class="output_box"
+                    readonly
+                ></textarea>
+            </div>
+
+            <p class="error-message" id="errorMessage"></p>
+        </div>
+    </body>
+</html>
